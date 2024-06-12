@@ -1,3 +1,4 @@
+# service calculating monthly stats per day for current month
 class MonthlyStatsResolver
   def perform
     per_day_calculations

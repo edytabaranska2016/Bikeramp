@@ -1,3 +1,4 @@
+# service calculating weekly stats for current month
 class WeeklyStatsResolver
   def perform
     { 

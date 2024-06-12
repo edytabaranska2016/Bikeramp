@@ -1,3 +1,4 @@
+# api points for creating and showing list of trips
 module Api
   class TripsController < ApplicationController
     def index

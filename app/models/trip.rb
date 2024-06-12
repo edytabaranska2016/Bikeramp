@@ -1,3 +1,4 @@
+# validations for Trip model
 class Trip < ApplicationRecord
   validates :start_address, presence: true
   validates :start_address, format: { with: /.{3,}\, .{3,}\, .{3,}/,

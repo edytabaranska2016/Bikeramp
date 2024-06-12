@@ -148,13 +148,7 @@ Style/Documentation:
     - 'app/helpers/application_helper.rb'
     - 'app/mailers/application_mailer.rb'
     - 'app/models/application_record.rb'
-    - 'app/models/location.rb'
-    - 'app/models/trip.rb'
-    - 'app/services/distance_resolver.rb'
-    - 'app/services/monthly_stats_resolver.rb'
     - 'config/application.rb'
-    - 'db/migrate/20240612153135_create_trips.rb'
-    - 'db/migrate/20240612155254_create_locations.rb'
 
 # Offense count: 1
 # This cop supports safe autocorrection (--autocorrect).

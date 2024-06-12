@@ -1,6 +1,5 @@
+# service for calculate distance between start and destination address using geocoder gem
 class DistanceResolver
-  # extend ::Concerns::Performable
-
   def initialize(trip)
     @trip = trip
   end

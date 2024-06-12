@@ -1,3 +1,4 @@
+# validations for Location model and defining field to use geocoding
 class Location < ApplicationRecord
   geocoded_by :address
 

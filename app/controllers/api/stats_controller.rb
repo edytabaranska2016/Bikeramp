@@ -1,3 +1,4 @@
+# api points for checking weekly and monthly stats
 module Api
   class StatsController < ApplicationController
     def weekly
