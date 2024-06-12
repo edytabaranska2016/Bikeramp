@@ -10,8 +10,7 @@ module Api
       @trip = Trip.new(trip_params)
 
       if @trip.save
-        create_start_address_location
-        create_destination_address_location
+        update_distance_from_coordinates
         render json: @trip
       else
         render json: @trip.errors, status: :unprocessable_entity
@@ -25,13 +24,21 @@ module Api
     end
 
     def create_start_address_location
-      start_location = Location.new(address: trip_params[:start_address])
-      start_location.save
+      Location.create(address: trip_params[:start_address])
     end
 
     def create_destination_address_location
-      destination_location = Location.new(address: trip_params[:destination_address])
-      destination_location.save
+      Location.create(address: trip_params[:destination_address])
+    end
+
+    def calculated_distance
+      ::DistanceResolver.new(@trip).perform
+    end
+
+    def update_distance_from_coordinates
+      create_start_address_location
+      create_destination_address_location
+      @trip.update(distance: calculated_distance)
     end
   end
 end
