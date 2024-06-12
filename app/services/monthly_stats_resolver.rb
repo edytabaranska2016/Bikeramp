@@ -21,7 +21,7 @@ class MonthlyStatsResolver
   def per_day_calculations
     stats_arr = []
     current_month_range.each do |day|
-      next if trips_number(day) == 0
+      next if trips_number(day).zero?
 
       stats_set = {
         day:,

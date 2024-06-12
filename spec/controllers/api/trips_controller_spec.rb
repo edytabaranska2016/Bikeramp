@@ -10,22 +10,22 @@ describe Api::TripsController do
   end
 
   describe '#create' do
-    let(:not_valid_params) { 
+    let(:not_valid_params) do
       {
         start_address: 'Plac Europejski 20, Warszawa, Polska',
         destination_address: 'Grunwaldzka 46, 32-020 Wieliczka, Polska',
         price: 11.11,
-        date: '2024-06-122' 
+        date: '2024-06-122'
       }
-    }
-    let(:valid_params) { 
+    end
+    let(:valid_params) do
       {
         start_address: 'Plac Europejski 20, Warszawa, Polska',
         destination_address: 'Grunwaldzka 46, 32-020 Wieliczka, Polska',
         price: 11.11,
-        date: '2024-06-12' 
+        date: '2024-06-12'
       }
-    }
+    end
 
     context 'when valid params' do
       before { post :create, params: valid_params }

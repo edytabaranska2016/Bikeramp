@@ -1,9 +1,9 @@
 # service calculating weekly stats for current month
 class WeeklyStatsResolver
   def perform
-    { 
+    {
       total_distance: calculated_total_distance,
-      total_price: calculated_total_price 
+      total_price: calculated_total_price
     }
   end
 

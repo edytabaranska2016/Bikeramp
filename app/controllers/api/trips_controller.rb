@@ -8,7 +8,7 @@ module Api
 
     def create
       @trip = Trip.new(trip_params)
-      
+
       if @trip.save
         create_start_address_location
         create_destination_address_location
