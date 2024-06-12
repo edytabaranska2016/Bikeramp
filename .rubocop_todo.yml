@@ -176,7 +176,7 @@ Style/GlobalStdStream:
 # SupportedShorthandSyntax: always, never, either, consistent, either_consistent
 Style/HashSyntax:
   Exclude:
-    - 'app/services/monthly_stats_resolver.rb'
+    
 
 # Offense count: 2
 # This cop supports safe autocorrection (--autocorrect).

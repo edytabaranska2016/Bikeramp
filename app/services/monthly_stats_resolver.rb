@@ -24,7 +24,7 @@ class MonthlyStatsResolver
       next if trips_number(day) == 0
 
       stats_set = {
-        day: day,
+        day:,
         total_distance: formatted_total_dostance(day),
         avg_ride: avg_ride(day),
         avg_price: avg_price(day)
